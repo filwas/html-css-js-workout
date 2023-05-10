@@ -1,8 +1,8 @@
 
-function changeBorderColour() {
-    let colours = ["red", "green", "blue", "cyan", "magenta", "yellow", "black"];
-    let random = Math.floor(Math.random()*colours.length)
-    document.getElementsByClassName("box")[0].style.borderColor = colours[random];
+COLOURS = ["red", "green", "blue", "cyan", "magenta", "yellow", "black"];
+function changeBorderColourRandomly() {
+    let random = Math.floor(Math.random()*COLOURS.length)
+    document.querySelector(".box").style.borderColor = COLOURS[random];
 }
 
-setInterval(changeBorderColour, 3000)
+setInterval(changeBorderColourRandomly, 3000)
